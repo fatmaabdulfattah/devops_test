@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  ayfolder:
+    build: .
+    container_name: ayfolder
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    env_file:
+      - .env
