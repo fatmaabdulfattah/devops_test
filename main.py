@@ -1,14 +1,14 @@
 from fastapi import FastAPI
 
-app = FastAPI
+app = FastAPI()
 
 @app.get("/health")
-def health()
+def health():
     data = {"status": "ok"}
     return data
 
 @app.get("/")
-def root()
+def root():
     return {"message": "Hello"}
 
 if __name__ == "__main__":
